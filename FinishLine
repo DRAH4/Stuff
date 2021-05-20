@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class FinishLine : MonoBehaviour
+{
+
+    private void OnTriggerEnter(Collider Collision) //activating the collision afect
+    {
+        if (Collision.tag == "Player")  //string to attach the player if it collides with object
+
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //loads in the next scene when the player collides
+        }
+
+    }
+
+
+
+}
